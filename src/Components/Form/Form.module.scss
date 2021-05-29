@@ -1,0 +1,83 @@
+.wrapper{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 25vw;
+    position: fixed;
+    right: 0;
+    box-shadow: 0 20px 20px -5px rgba(rgb(46, 46, 46), .3);
+}
+.title{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.input{
+    width: 75%;
+    height: 5vh;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    margin: 10px 0;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+    &Title{
+        @extend .input;
+
+    }
+    
+    &Cost{
+        @extend .input;
+
+    }
+
+    &Select{
+        @extend .input;
+
+    }    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.submit{
+    @extend .input;
+    color: #fff;
+    background-color: gray;
+    font-weight: 700;
+    border: 0;
+    box-shadow: 0 20px 40px -5px rgba(rgb(46, 46, 46), .3);
+    cursor: pointer;
+    border-radius: 20px;
+    
+    &Food{
+        @extend .submit;
+        background-color:#f1c41d;
+    }
+    &Entertainment{
+        @extend .submit;
+        background-color:rgb(2, 100, 40);
+    }
+    &Accessories{
+        @extend .submit;
+        background-color: rgb(84, 2, 100);
+    }
+    &Subscription{
+        @extend .submit;
+        background-color: rgb(2, 93, 100);
+    }
+    &Bill{
+        @extend .submit;
+        background-color: rgb(124, 3, 3);
+    }
+    &Other{
+        @extend .submit;
+        background-color: rgb(1, 1, 179);
+    }
+
+}

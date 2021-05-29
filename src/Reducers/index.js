@@ -10,31 +10,31 @@ const initialState = {
             id: 2,
             title: 'Pendrive',
             cost: 30,
-            costType: 'Electronic',
+            costType: 'Entertainment',
         },
         {
             id: 3,
             title: 'Book',
             cost: 20,
-            costType: 'Entertainment'
+            costType: 'Accessories'
         },
         {
             id: 4,
             title: 'Lidl',
             cost: 60,
-            costType: 'Food'
+            costType: 'Subscription'
         },
         {
             id: 5,
             title: 'Swimpool',
             cost: 20,
-            costType: 'Entertainment'
+            costType: 'Bill'
         },
         {
             id: 6,
             title: 'Book',
             cost: 10,
-            costType: 'Entertainment'
+            costType: 'Other'
         },
     ],
     
@@ -43,6 +43,12 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
     console.log(action)
     switch(action.type){
+        case('ADD_ITEM'):
+        return{
+            ...state,
+            payments:[...state.payments, action.payload]
+        };
+        
         case('REMOVE_ITEM'):
         return{
             ...state,

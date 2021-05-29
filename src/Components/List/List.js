@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './List.module.scss';
 
 const List = ({title, cost, costType}) => (
-        <li className={styles.wrapper}>
-            <div>    
+        <div className={styles[`wrapper${costType}`]}>
+            <li>    
                 <h1 className={styles.title}>{title}</h1>
                 <p className={styles.category}>{costType}</p>
-            </div>
+            </li>
             <p className={styles.cost}>{cost} &euro;</p>
-        </li>
+        </div>
 );
 export default List;

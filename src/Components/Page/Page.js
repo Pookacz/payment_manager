@@ -5,9 +5,8 @@ import DeleteButton from '../Button/DeleteButton'
 import styles from './Page.module.scss';
 import { removeItem } from '../../actions/index';
 
-
-
 const Page = props =>(
+
     <ul>
         {props.payments.map((item, index) => (
             <div className={styles.wrapper} key={index}>
