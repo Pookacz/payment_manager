@@ -4,8 +4,20 @@
     flex-direction: row;
     align-items: center;
     margin: 0 27.5vw ;
-    width: 50vw;
-    float: left
+    // width: 50vw;
+    float: left;
+    &Empty{
+        display: flex;
+        margin: 0 27.5vw ;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        float:left;
+    }
+}
+.title{
+    font-size: 20px;
+    color: gray;
 }
 ul{
     margin: 0;

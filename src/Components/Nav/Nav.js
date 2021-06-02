@@ -1,16 +1,13 @@
-import React from 'react';
-import styles from './Nav.module.scss';
+import React from "react";
+import styles from "./Nav.module.scss";
+import NavItems from "../NavItems/NavItems";
+import Budget from "../Budget/Budget";
 
-class Nav extends React.Component{
-
-    render(){
-
-        return(
-            <div className={styles.wrapper}>
-                sample
-            </div>
-        );
-    };
-};
+const Nav = () => (
+  <div className={styles.wrapper}>
+    <Budget />
+    <NavItems />
+  </div>
+);
 
 export default Nav;

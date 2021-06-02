@@ -8,3 +8,8 @@ export const removeItem = (index) => ({
   payload: index,
 });
 
+export const addBudget = (budget) => ({
+  type: "ADD_BUDGET",
+  payload: budget,
+});
+

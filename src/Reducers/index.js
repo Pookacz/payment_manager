@@ -1,4 +1,33 @@
 const initialState = {
+    budget:[{
+        budget: 0,
+    }],
+    costList: [
+        {
+            title: 'Food',
+            cost: 0,
+        },
+        {
+            title: 'Entertainment',
+            cost: 0,
+        },
+        {
+            title: 'Accessories',
+            cost: 0,
+        },
+        {
+            title: 'Subscription',
+            cost: 0,
+        },
+        {
+            title: 'Bill',
+            cost: 0,
+        },
+        {
+            title: 'Other',
+            cost: 0,
+        },
+    ],
     payments: [
         {
             id: 1,
@@ -48,7 +77,11 @@ const rootReducer = (state = initialState, action) => {
             ...state,
             payments:[...state.payments, action.payload]
         };
-        
+        case('ADD_BUDGET'):
+        return{
+            ...state,
+            budget:[action.payload]
+        };
         case('REMOVE_ITEM'):
         return{
             ...state,
