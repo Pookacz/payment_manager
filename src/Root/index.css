@@ -4,5 +4,10 @@ body{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     border: 0;
-    /* height: 100vh; */
+
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

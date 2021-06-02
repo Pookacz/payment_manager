@@ -2,25 +2,20 @@
 .wrapper{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin: 0 27.5vw ;
-    // width: 50vw;
-    float: left;
-    &Empty{
-        display: flex;
-        margin: 0 27.5vw ;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        float:left;
-    }
+    margin: 0 25vw ;
+    width: 50vw;
 }
 .title{
     font-size: 20px;
     color: gray;
+
 }
 ul{
     margin: 0;
+    padding: 0;
     list-style-type: none;
+    width: 45vw;
 }
 

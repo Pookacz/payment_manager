@@ -8,8 +8,8 @@ import { removeItem } from "../../actions/index";
 const Page = (props) => (
   <ul>
     {props.payments.length === 0  ? (
-        <div className={styles.wrapperEmpty}>
-            <p className={styles.title}>Nothing to see here. 😞 </p>
+        <div className={styles.wrapper}>
+          <p className={styles.title}>Nothing to see here. 😞 </p>
         </div>
 
     ) : (
