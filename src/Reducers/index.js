@@ -28,6 +28,7 @@ const initialState = {
             cost: 0,
         },
     ],
+    
     payments: [
         {
             id: 1,
@@ -89,6 +90,12 @@ const rootReducer = (state = initialState, action) => {
                 ...state.payments.filter( item => item.id !== action.payload)
             ]               
         };
+        // case('SUM_COSTS'):
+        // return{
+        //     ...state,
+        //     costList: [...state.costList.map(item => item.title === action.payload.title ? {...item, cost: action.payload.cost} : item)] 
+        //     // costList: [...state.costList, action.payload.cost]
+        // };
             default:
                 return state;
     }
