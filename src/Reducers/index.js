@@ -37,6 +37,12 @@ const initialState = {
             costType: 'Food',
         },
         {
+            id: 1,
+            title: 'Biedronka',
+            cost: 40,
+            costType: 'Food',
+        },
+        {
             id: 2,
             title: 'Pendrive',
             cost: 30,
