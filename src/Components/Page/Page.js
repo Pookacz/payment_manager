@@ -7,11 +7,10 @@ import { removeItem } from "../../actions/index";
 
 const Page = (props) => (
   <ul>
-    {props.payments.length === 0  ? (
-        <div className={styles.wrapper}>
-          <p className={styles.title}>Nothing to see here. 😞 </p>
-        </div>
-
+    {props.payments.length === 0 ? (
+      <div className={styles.wrapper}>
+        <p className={styles.title}>Nothing to see here. 😞 </p>
+      </div>
     ) : (
       props.payments.map((item, index) => (
         <div className={styles.wrapper} key={index}>

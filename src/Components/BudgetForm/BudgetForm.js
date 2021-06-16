@@ -1,27 +1,26 @@
-
 import React from "react";
 import styles from "./BudgetForm.module.scss";
 import { connect } from "react-redux";
 import { addBudget } from "../../actions";
 
 class BudgetForm extends React.Component {
-    state = {
-        budget: "",
-    };
+  state = {
+    budget: "",
+  };
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
-        });
-    };
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  };
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.addBudget(this.state);
-        this.setState({
-          budget: this.state.budget,
-        });
-      };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.addBudget(this.state);
+    this.setState({
+      budget: this.state.budget,
+    });
+  };
 
   render() {
     return (
@@ -52,10 +51,9 @@ class BudgetForm extends React.Component {
   }
 }
 const mapDispatchToProps = (dispatch) => {
-    return {
-      addBudget: (budget) =>
-        dispatch(addBudget(budget)),
-    };
+  return {
+    addBudget: (budget) => dispatch(addBudget(budget)),
   };
-  
-  export default connect(null, mapDispatchToProps)(BudgetForm);
+};
+
+export default connect(null, mapDispatchToProps)(BudgetForm);

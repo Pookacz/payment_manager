@@ -6,7 +6,6 @@ import { addItem } from "../../actions";
 
 class Form extends React.Component {
   state = {
-    id: "",
     title: "",
     cost: "",
     costType: "",
@@ -19,7 +18,6 @@ class Form extends React.Component {
   };
 
   handleSelect = (e) => {
-    console.log(e.target.value);
     this.setState({
       costType: e.target.value,
     });

@@ -1,4 +1,4 @@
-export const addItem = (index, title, cost, costType) => ({
+export const addItem = (index) => ({
   type: "ADD_ITEM",
   payload: index,
 });
