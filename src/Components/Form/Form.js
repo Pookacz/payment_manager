@@ -68,12 +68,9 @@ class Form extends React.Component {
               <option value="Select" disabled hidden>
                 Select
               </option>
-              <option value="Food">Food</option>
-              <option value="Entertainment">Entertainment</option>
-              <option value="Accessories">Accessories</option>
-              <option value="Subscription">Subscription</option>
-              <option value="Bill">Bill</option>
-              <option value="Other">Other</option>
+              {this.props.costList.map((item) => (
+                <option value={item.title}>{item.title}</option>
+              ))}
             </select>
             <input
               className={styles[`submit${this.state.costType}`]}
@@ -89,6 +86,11 @@ class Form extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  const { costList } = state;
+  return { costList };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     addItem: (title, cost, costType) =>
@@ -96,4 +98,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
