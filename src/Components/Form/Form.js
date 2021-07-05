@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Form.module.scss";
-import BudgetForm from "../BudgetForm/BudgetForm";
 import { connect } from "react-redux";
 import { addItem } from "../../actions";
 
@@ -37,50 +36,49 @@ class Form extends React.Component {
     return (
       <>
         <div className={styles.wrapper}>
-          <h1 className={styles.title}>Add New</h1>
-          <form
-            onSubmit={this.handleSubmit}
-            className={styles.form}
-            autoComplete="off"
-          >
-            <input
-              className={styles.inputTitle}
-              type="text"
-              name="title"
-              placeholder="title"
-              onChange={this.handleChange}
-              value={this.state.title}
-            />
-            <input
-              className={styles.inputCost}
-              type="number"
-              name="cost"
-              placeholder="cost"
-              onChange={this.handleChange}
-              value={this.state.cost}
-            />
-            <select
-              onChange={this.handleSelect}
-              value={this.state.value}
-              className={styles.inputSelect}
-              defaultValue={"Select"}
+            <h1 className={styles.title}>Add New</h1>
+            <form
+              onSubmit={this.handleSubmit}
+              className={styles.form}
+              autoComplete="off"
             >
-              <option value="Select" disabled hidden>
-                Select
-              </option>
-              {this.props.costList.map((item) => (
-                <option value={item.title}>{item.title}</option>
-              ))}
-            </select>
-            <input
-              className={styles[`submit${this.state.costType}`]}
-              type="submit"
-              value="Add."
-              disabled={this.state.costType === "" ? true : false}
-            />
-          </form>
-          <BudgetForm />
-        </div>
+              <input
+                className={styles.inputTitle}
+                type="text"
+                name="title"
+                placeholder="title"
+                onChange={this.handleChange}
+                value={this.state.title}
+              />
+              <input
+                className={styles.inputCost}
+                type="number"
+                name="cost"
+                placeholder="cost"
+                onChange={this.handleChange}
+                value={this.state.cost}
+              />
+              <select
+                onChange={this.handleSelect}
+                value={this.state.value}
+                className={styles.inputSelect}
+                defaultValue={"Select"}
+              >
+                <option value="Select" disabled hidden>
+                  Select
+                </option>
+                {this.props.costList.map((item, index) => (
+                  <option key={index} value={item.title}>{item.title}</option>
+                ))}
+              </select>
+              <input
+                className={styles[`submit${this.state.costType}`]}
+                type="submit"
+                value="Add."
+                disabled={this.state.costType === "" ? true : false}
+              />
+            </form>
+          </div>
       </>
     );
   }

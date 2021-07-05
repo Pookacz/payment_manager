@@ -24,7 +24,7 @@ class BudgetForm extends React.Component {
 
   render() {
     return (
-      <>
+      <div >
         <h1 className={styles.title}>Set Budget</h1>
         <form
           onSubmit={this.handleSubmit}
@@ -46,7 +46,7 @@ class BudgetForm extends React.Component {
             disabled={this.state.budget === "" ? true : false}
           />
         </form>
-      </>
+      </div>
     );
   }
 }
