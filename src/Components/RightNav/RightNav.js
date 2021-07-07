@@ -11,7 +11,7 @@ const RightNav = ({ openPopup }) =>(
         <BudgetForm />
         <div className={styles.graph}>
             <Button children={'Graph'} onClick={openPopup}/>
-        </div>
+        </div> 
     </div>
 );
 

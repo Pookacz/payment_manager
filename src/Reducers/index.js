@@ -26,6 +26,7 @@ const initialState = {
   ],
 
   payments: [],
+  graph: "",
 };
 
 const rootReducer = (state = initialState, action) => {
